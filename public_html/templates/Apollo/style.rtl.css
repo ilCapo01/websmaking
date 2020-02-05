@@ -1,0 +1,140 @@
+  @import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body {
+    min-width: 320px;
+    padding: 0;
+    direction: rtl;
+    background-color: #d6eaff;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    width: 90%;
+    margin: auto;
+}
+
+p {
+  line-height: 150%;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  border-bottom: 5px solid #e5eaf3;
+  font-family: 'Montserrat', sans-serif;
+  color: #314fa3;
+}
+
+a {
+  text-decoration: none;
+  color: #4c518b;
+}
+
+#post-body {
+    padding: 4%;
+    border-bottom: 10px solid #87bef7;
+    background: #f9f7f7;
+    margin-bottom: 50px;
+    word-wrap: break-word;
+}
+
+ul#menu-topo {
+  margin: 0 auto;
+  padding: 10px 0;
+  list-style-type: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul#menu-topo li {
+  display: inline;
+  margin: 0;
+}
+
+ul#menu-topo li a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 4px 10px;
+  text-decoration: none;
+}
+
+ul#menu-topo li a:hover {
+      font-weight: bold;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.footer {
+    clear: both;
+}
+
+.sidebartxt {
+    padding: 2%;
+    border-bottom: 10px solid #87bef7;
+    background: #f9f7f7;
+    margin-bottom: 50px;
+    width: 15%;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 800px) {
+   .sidebartxt {
+    margin-top: 5%;
+  }
+  
+  .nav-menu {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    background-color: #1f67b1;
+    table-layout: fixed;
+  }
+  ul#menu-topo {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #4c5c8b;
+    table-layout: fixed;
+
+    transition: all .3s ease-in;
+  }
+  ul#menu-topo li {
+    display: block;
+    border-bottom: 1px solid #4a88c7;
+    line-height: 3;
+    color: white;
+    background: #1f67b1;
+  }
+  #menu-topo li a {
+    color: white;
+  }
+  ul#menu-topo li.hide {
+    display: none !important;
+  }
+  #menu-topo li:hover {
+    border-bottom: 1px solid #4a88c7;
+    background-color: #4a88c7;
+  }
+  /****TOGGLE****/
+  .nav-toggle-label:before {
+    color: white;
+    content: '☰';
+  }
+  .nav-toggle:checked + ul#menu-topo {
+    display: table;
+    margin-left: 0;
+  }
+  
+  ul#menu-topo li a {
+    display: inline-block;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 4px 0px;
+    text-decoration: none;
+  }
+}

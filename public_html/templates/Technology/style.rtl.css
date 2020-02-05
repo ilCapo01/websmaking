@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
+
+body {
+    font-size: 15px;
+    font-family: Arimo, sans-serif;
+    direction: rtl;
+    margin: 0;
+    background: #f7f7f7;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+    width: 850px;
+    margin: auto;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #1b2025;
+}
+
+.header {
+    background: #23282d;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: 50%;
+    margin: 0;
+}
+
+.inside-header {
+    width: 850px;
+    margin: auto;
+    color: #fff;
+}
+
+.menu-inside {
+    background: #23282d;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.content {
+    width: 850px;
+    margin: auto;
+    background: #f7f7f7;
+}
+
+.active {
+  background-color: #4cafaf;
+}
+
+.footer {
+    background: #f1f1f1;
+    padding: 0px;
+    clear: both;
+}
+
+.inside-footer {
+    margin: auto;
+    background: #23282d;
+    color: #fff;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+    border: solid 0px;
+    padding: 15px;
+    outline: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: normal;
+    background: #000000;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    -webkit-border-radius: 1px 1px 1px 1px;
+    min-width: 70px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background: #b9b8b8;
+    color: black;
+}
+input[type="submit"]:hover {
+    background: #b9b8b8;
+    color: black;
+}
+
+input[type="reset"]:hover {
+    background: #b9b8b8;
+    color: black;
+}
+
+.sidebartxt {
+    width: 24%;
+    vertical-align: top;
+    float: right;
+    padding: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    
+    body {
+        width: 100%;
+        margin: auto;
+    }
+    ul {
+        width: 95%;
+    }
+    
+    .header {
+        margin: 0px;
+    }
+    .inside-header {
+        width: 100%;
+        padding: 0px;
+    }
+    
+    .menu-inside {
+        background: #23282d;
+        width: auto; 
+    }
+
+    .inside-content {
+        padding: 5px;
+    }
+    
+    .inside-footer {
+        width: 100%;
+        padding: 0px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        background: #23282d;
+        color: #fff;
+    }
+    
+    .content {
+        width: 100%;
+        padding: 0px;
+    }
+    
+    .footer {
+        background: #f1f1f1;
+        padding: 0px;
+    }
+}

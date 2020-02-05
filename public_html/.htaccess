@@ -1,0 +1,48 @@
+#Options -MultiViews
+#Options +FollowSymLinks
+
+RewriteEngine On
+#RewriteBase /
+
+###########
+# Routes. #
+###########
+
+# Clean url the index.php
+#RewriteRule ^index/([a-zA-Z_]+)/$ index.php?do=$1 [QSA]
+
+# https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritecond
+#RewriteCond %{HTTP_HOST}/dashboard !-f
+#RewriteRule ^(.*+)$ dashboard.php [QSA]
+
+RewriteRule ^([a-zA-Z0-9_]+)$ sites.php?st=$1 [QSA]
+RewriteRule ^([a-zA-Z0-9_]+)/$ sites.php?st=$1 [QSA]
+
+#RewriteRule ^([a-zA-Z0-9/]*)/([a-zA-Z/]*)$ sites.php?st=$1&do=$2 [QSA]
+#RewriteRule ^([a-zA-Z0-9/]*)/([a-zA-Z/]*)/$ sites.php?st=$1&do=$2 [QSA]
+
+#RewriteRule ^([^/]*)/p/([^/]*)$ sites.php?st=$1&do=p&id=$2 [QSA]
+#RewriteRule ^([^/]*)/p/([^/]*)/$ sites.php?st=$1&do=p&id=$2 [QSA]
+
+RewriteRule ^([^/]*)/([^/]*)$ sites.php?st=$1&id=$2 [QSA]
+RewriteRule ^([^/]*)/([^/]*)/$ sites.php?st=$1&id=$2 [QSA]
+
+ErrorDocument 404 /templates/404.php
+
+php_flag display_startup_errors on
+php_flag display_errors on
+php_flag html_errors on
+php_flag  log_errors on
+php_value error_log /home/path/public_html/websmaking.com/php-error.log
+
+#RewriteCond %{ENV:HTTPS} !on [OR]
+#RewriteCond %{HTTP_HOST} !^www.websmaking.COM$ [NC]
+#RewriteRule ^(.*)$ https://www.websmaking.COM/$1 [L,R=301]
+
+#<FilesMatch "\.(html|htm|js|css|php)>
+#    FileETag None
+#    Header unset ETag
+#    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+#    Header set Pragma "no-cache"
+#    Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+#</FilesMatch>

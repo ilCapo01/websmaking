@@ -1,0 +1,11 @@
+{
+  "name": "Avada",
+  "thumbnail_img": "",
+  "preview_img": "https://i.websmaking.com/images/templates/demo/photo-8.png",
+  "folderName": "Avada",
+  "author": "WebsMaking",
+  "data": [
+    { "language":"he", "css":"", "header":"", "content":"", "footer":"", "sidebar":"", "author":"", "main_page_txt":"" },
+    { "language":"en", "css":"", "header":"", "content":"", "footer":"", "sidebar":"", "author":"", "main_page_txt":"" }
+  ]
+}

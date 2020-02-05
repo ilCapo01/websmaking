@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background-color: #fff;
+  direction: rtl;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+    float: left;
+    margin-right: 20px;
+}
+
+.welcome-2u a:hover {
+    text-decoration: none;
+}
+
+header.h {
+    padding: 28px;
+    background: #6c63ff;
+    color: #fff;
+}
+
+a.to-site {
+    background: #fff;
+    color: #6c63ff;
+    padding: 10px;
+    border-radius: 6px;
+    float: left;
+    margin-top: -10px;
+}
+
+
+a.to-site:Hover {
+    background: #ebe9ff;
+}
+
+.welcome-2u {
+    padding: 20px;
+}
+
+.inside {
+    width: 900px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 410px;
+}
+
+.welcome-2u img {
+    width: 55%;
+}
+
+.faq-link {
+    background: #e4e2ff;
+    padding: 10px;
+    border-radius: 30px;
+    color: #928fb1;
+    font-size: 15pt;
+    width: max-content;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.faq-link:hover {
+    background: #d6d4f5;
+}
+
+.faq {
+    width: 900px;
+    margin: auto;
+    margin-bottom: 65px;
+}
+
+footer.f {
+    background: #221f1f;
+    color: #8b8a88;
+}
+
+.footer-inside {
+    width: 900px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.content {
+    width: 900px;
+    margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .inside {
+        width: 80%;
+    }
+    
+    .content {
+    width: 80%;
+}
+    
+    .faq {
+        width: 80%;
+    }
+
+    .welcome-2u img {
+        width: 100%;
+    }
+    
+    .footer-inside {
+        width: 80%;
+    }
+}

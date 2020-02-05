@@ -1,0 +1,240 @@
+body {
+    font-size: 15px;
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    direction: rtl;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+    width: 850px;
+    margin: auto;
+}
+
+li {
+  float: right;
+}
+
+.header li a {
+    color: white;
+}
+
+li a {
+    display: block;
+    color: #2f2f2f;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+.menu-inside li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+.menu-inside li a:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    float: left;
+    width: 65%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: none;
+    background: #f1f1f1;
+    box-shadow: 0 0 0 5px rgb(38, 191, 190);
+    outline: none;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    background: #2196F3;
+    color: white;
+    border-left: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 17px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    box-shadow: 0 0 0 5px rgb(38, 191, 190);
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.header {
+    height: 70px;
+    background: #60bfc3;
+}
+
+.inside-header {
+    width: 850px;
+    margin: auto;
+}
+
+.content {
+    padding: 5px;
+    width: 850px;
+    margin: auto;
+}
+
+.active {
+  background-color: #4cafaf;
+}
+
+.footer {
+    background: #f4f5f5;
+    padding: 5px;
+    clear: both;
+    color: #999999;
+}
+
+.inside-footer {
+    width: 850px;
+    margin: auto;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+    border: solid 0px;
+    padding: 15px;
+    outline: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: normal;
+    background: #000000;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    -webkit-border-radius: 1px 1px 1px 1px;
+    min-width: 70px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background: #b9b8b8;
+    color: black;
+}
+input[type="submit"]:hover {
+    background: #b9b8b8;
+    color: black;
+}
+
+input[type="reset"]:hover {
+    background: #b9b8b8;
+    color: black;
+}
+
+.sidebartxt {
+    width: 24%;
+    vertical-align: top;
+    float: right;
+    padding: 10px;
+}
+
+.inside-header input[type="button"], input[type="submit"], input[type="reset"] {
+    padding: 15px;
+    outline: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: normal;
+    background: transparent;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    min-width: 70px;
+    cursor: pointer;
+    border: solid 1px #fff;
+    border-radius: 35px;
+}
+
+.inside-header input[type="button"]:hover {
+    border: solid 1px #fff;
+    background: #fff;
+    color: #000;
+}
+
+@media screen and (max-width: 767px) {
+    
+    body {
+        width: 100%;
+        margin: auto;
+    }
+    ul {
+        width: 95%;
+    }
+    
+    .inside-header img {
+        display: none;
+    }
+
+    .header {
+        margin: 0px;
+    }
+    .inside-header {
+        width: 100%;
+    }
+
+    .inside-content {
+    }
+    
+    .inside-footer {
+        width: 95%;
+        padding: 5px;
+    }
+    
+    .content {
+        width: 100%;
+        padding: 0px;
+    }
+    
+    .footer {
+        padding: 0px;
+    }
+}

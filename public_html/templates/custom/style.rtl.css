@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+body {
+    margin: 0;
+    background-color: #e8e8e8;
+    font-family: 'Varela Round', sans-serif;
+    direction: rtl;
+}
+
+.inside-header {
+    float: left;
+}
+
+
+/* Nav */
+
+nav {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    font-family: 'Varela Round', sans-serif;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+nav li a {
+    color: #000;
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+
+nav li a:hover,
+nav li a:focus,
+.menu__checkbox:hover,
+.menu__checkbox:focus,
+ :focus {
+    background-color: #f4f4f4;
+}
+
+
+.headerwidth {
+    width: 900px;
+    margin: auto;
+}
+
+
+
+/* menu */
+
+.menu {
+    display: none;
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+
+/* menu icon */
+
+.menu__icon {
+    cursor: pointer;
+    display: block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.hamburger {
+    background: #333;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 30px;
+}
+
+.hamburger:before,
+.hamburger:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .5s ease-out;
+    width: 100%;
+}
+
+.hamburger:before {
+    top: 8px;
+}
+
+.hamburger:after {
+    top: -8px;
+}
+
+
+/* menu checkbox */
+
+.menu__checkbox {
+    opacity: 0;
+}
+
+.menu__checkbox:checked~.menu {
+    max-height: 240px;
+    display: block;
+    overflow: auto;
+}
+
+.menu__checkbox:focus~.menu__icon {
+    outline: #5E9ED6 1px solid;
+    background-color: #f4f4f4;
+}
+
+.menu__checkbox:checked~.menu__icon {
+    background-color: #f4f4f4;
+}
+
+.menu__checkbox:checked~.menu__icon .hamburger {
+    background: transparent;
+}
+
+.menu__checkbox:checked~.menu__icon .hamburger:before {
+    transform: rotate(-225deg);
+}
+
+.menu__checkbox:checked~.menu__icon .hamburger:after {
+    transform: rotate(225deg);
+}
+
+.menu__checkbox:checked~.menu__icon:not(.steps) .hamburger:before,
+.menu__checkbox:checked~.menu__icon:not(.steps) .hamburger:after {
+    top: 0;
+}
+
+.content {
+    padding-top: 105px;
+    width: 60%;
+    margin: auto;
+}
+
+.sidebartxt {
+    width: 315px;
+    background: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    padding: 5px;
+    border-radius: 15px;
+    float: right;
+}
+
+.inside-content {
+    background: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    padding: 5px;
+    border-radius: 15px;
+    word-wrap: break-word;
+}
+
+.footer {
+    padding: 5px;
+    clear: both;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+    nav li {
+        float: right;
+    }
+    nav li a {
+        padding: 20px 30px;
+    }
+    .menu {
+        display: block;
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .menu__icon,
+    .menu__checkbox,
+    .hamburger {
+        display: none;
+    }
+    
+    .inside-content {
+        width: 62%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .inside-header {
+        margin-top: -15px;
+    }
+    
+    .content {
+        width: 95%;
+    }
+    
+    .sidebartxt {
+        width: 95%;
+        float: none;
+    }
+    
+    .inside-content {
+        width: 95%;
+        margin-top: 10px;
+    }
+    
+    .headerwidth {
+        width: 100%;
+    }
+}
